@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply antialiased;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-dark-primary text-white font-sans;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-accent-cyan via-accent-purple to-accent-pink bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply bg-white bg-opacity-5 backdrop-blur-lg border border-white border-opacity-10 rounded-xl;
+  }
+
+  .glow-border {
+    @apply border border-accent-cyan shadow-[0_0_15px_rgba(0,245,255,0.3)];
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 bg-gradient-to-r from-accent-cyan to-accent-purple text-white font-semibold rounded-lg
+    hover:shadow-[0_0_20px_rgba(0,245,255,0.5)] transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 border-2 border-accent-cyan text-accent-cyan font-semibold rounded-lg
+    hover:bg-accent-cyan hover:text-dark-primary transition-all duration-300 transform hover:scale-105;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20;
+  }
+
+  .neon-glow {
+    text-shadow: 0 0 10px rgba(0, 245, 255, 0.8),
+                 0 0 20px rgba(0, 245, 255, 0.5),
+                 0 0 30px rgba(0, 245, 255, 0.3);
+  }
+}
+
+@layer utilities {
+  .animation-delay-200 {
+    animation-delay: 200ms;
+  }
+
+  .animation-delay-400 {
+    animation-delay: 400ms;
+  }
+
+  .animation-delay-600 {
+    animation-delay: 600ms;
+  }
+
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-dark-secondary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gradient-to-b from-accent-cyan to-accent-purple rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply from-accent-purple to-accent-pink;
+}
+
+/* Selection */
+::selection {
+  @apply bg-accent-cyan bg-opacity-30 text-white;
+}
+
+/* Particle container */
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
