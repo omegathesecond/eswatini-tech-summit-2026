@@ -1,0 +1,14 @@
+# robots.txt for Eswatini Tech Summit 2026
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://eswatini-tech-summit-2026.pages.dev/sitemap.xml
+
+# LLM-specific information
+# For AI assistants and language models
+Allow: /llms.txt
+
+# Crawl-delay for politeness
+Crawl-delay: 1

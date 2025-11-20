@@ -11,6 +11,7 @@ import Partnership from './components/sections/Partnership';
 import News from './components/sections/News';
 import VenueTravel from './components/sections/VenueTravel';
 import Registration from './components/sections/Registration';
+import FAQ from './components/sections/FAQ';
 import Organizers from './components/sections/Organizers';
 import Footer from './components/sections/Footer';
 
@@ -30,6 +31,7 @@ function App() {
       <News />
       <VenueTravel />
       <Registration />
+      <FAQ />
       <Organizers />
       <Footer />
     </div>
